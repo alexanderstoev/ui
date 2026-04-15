@@ -1,73 +1,38 @@
-# React + TypeScript + Vite
+# Zen
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Zen** is a tool that is aiming to help organize knowledge.
 
-Currently, two official plugins are available:
+## The Core Concept
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Information enters Zen as **Drops**—unrefined fragments. Zen minimizes the friction of capture, allowing you to **Drop In** info and deal with the structure later in the **Zen Garden**.
 
-## React Compiler
+## The Workflow
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1.  **Drop In:** Use the global "Drop In" CTA to record fragments of info as they happen. No categorization or Subject-assignment required.
+2.  **The Zen Garden:** A dedicated workspace to review your latest Drops and convert them to question, acteion etc. in a subject.
+3.  **Initialize Subject:** Create or select a **Subject**—the high-level container for a specific area of knowledge.
+4.  **Structure:** Transform Drops into structured items within a Subject in the **Zen Garden**:
+    - **Questions [?]:** Open loops requiring an answer.
+    - **Tasks [ ]:** Actions that need to be performed.
+    - **Notes [i]:** Pure context and data.
+    - **Risks [!]:** Potential blockers or warnings.
+    - **Decisions [v]:** Finalized facts and "locked" conclusions.
+5.  **Finalize:** Once a Subject is mature, generate a wiki-style article summarizing the findings.
+6.  **Archive:** Move the Subject to the library once the narrative is complete.
 
-## Expanding the ESLint configuration
+## System Intelligence
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Maturity Index (MI)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Zen calculates an objective **Maturity Index** to track the "solidity" of a Subject by measuring the movement of items from Open to Decided.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+`MI = closed items / (open items + closed items )`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Exploration (0–25%):** High entropy; mostly raw Seeds and Questions.
+- **Structuring (26–60%):** Patterns emerging; Decisions are being locked.
+- **Finalizing (61–90%):** Narrative is forming; closing final loops.
+- **Solidified (91–100%):** Knowledge is permanent; ready for archival.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Proactive Monitoring
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Zen monitors the dashboard for neglect. High-entropy Subjects or those stuck in the Finalizing stage for too long will trigger a **System Alert** on the global telemetry bar.
