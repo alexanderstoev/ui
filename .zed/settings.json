@@ -14,8 +14,13 @@
       },
       "formatter": {
         "external": {
-          "command": "prettier",
-          "arguments": ["--write", "--stdin-filepath", "{buffer_path}"],
+          "command": "pnpm",
+          "arguments": [
+            "exec",
+            "prettier",
+            "--stdin-filepath",
+            "{buffer_path}",
+          ],
         },
       },
     },
@@ -26,13 +31,33 @@
       },
       "formatter": {
         "external": {
-          "command": "prettier",
-          "arguments": ["--write", "--stdin-filepath", "{buffer_path}"],
+          "command": "pnpm",
+          "arguments": [
+            "exec",
+            "prettier",
+            "--stdin-filepath",
+            "{buffer_path}",
+          ],
         },
       },
     },
   },
   "lsp": {
+    "emmet-language-server": {
+      "settings": {
+        "langiages": ["TSX"],
+      },
+    },
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "preferences": {
+            "importModuleSpecifier": "non-relative",
+            "importModuleSpecifierEnding": "minimal",
+          },
+        },
+      },
+    },
     "tailwindcss-language-server": {
       "settings": {
         "includeLanguages": {
