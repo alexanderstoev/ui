@@ -8,4 +8,4 @@ const meta = { title: "Blocks/SubjectSummary", component: SubjectSummary } satis
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-export const Dashboard: Story = {};
+export const Default: Story = {};
