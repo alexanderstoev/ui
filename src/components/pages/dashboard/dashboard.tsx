@@ -1,4 +1,8 @@
+import { CircleAlert } from "lucide-react";
+
 import { SubjectSummary } from "@/components/blocks/subject-summary/subject-summary";
+import { Alert, AlertDescription, AlertTitle } from "@/components/primitives/alert/alert";
+import { Card, CardContent } from "@/components/primitives/card/card";
 
 import type { Subject } from "@/types";
 
@@ -9,12 +13,17 @@ interface DashboardPageProps {
 export const DashboardPage = ({ subjects }: DashboardPageProps) => {
   return (
     <div className="flex flex-col gap-6">
-      <div className="w-full grow bg-gray-400">
-        <h1>Global stats</h1>
-      </div>
-      <div className="w-full grow bg-yellow-400">
-        <h1>Alert</h1>
-      </div>
+      <Card>
+        <CardContent>Global stats</CardContent>
+      </Card>
+      <Alert variant="destructive">
+        <CircleAlert />
+        <AlertTitle>Subject: Core Architecture</AlertTitle>
+        <AlertDescription className="text-sm">
+          The Core Architecture subject seems to be lacking behind. You might want the look at the{" "}
+          <a>Pending Actions</a>
+        </AlertDescription>
+      </Alert>
       <div className="flex flex-wrap gap-6">
         {subjects.map((subject) => (
           <SubjectSummary subject={subject} key={subject.id} />
