@@ -12,7 +12,7 @@ export interface Subject {
   description?: string;
   lastUpdate: Date;
   status: string;
-  timeline?: TimeLineEntry[] | null;
+  timeline: TimeLineEntry[];
   tasks: Task[];
   questions: Question[];
   risks: Risk[];

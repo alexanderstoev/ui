@@ -3,6 +3,7 @@ import { MOCK_NOTES } from "@/testing/mocks/notes";
 import { MOCK_QUESTIONS } from "@/testing/mocks/questions";
 import { MOCK_RISKS } from "@/testing/mocks/risks";
 import { MOCK_TASKS } from "@/testing/mocks/tasks";
+import { MOCK_TIMELINE } from "@/testing/mocks/timeline";
 import type { Subject } from "@/types";
 
 export const MOCK_SUBJECTS: Subject[] = [
@@ -17,6 +18,7 @@ export const MOCK_SUBJECTS: Subject[] = [
     notes: MOCK_NOTES,
     risks: MOCK_RISKS,
     decisions: MOCK_DECISIONS,
+    timeline: MOCK_TIMELINE,
   },
   {
     id: "2",
@@ -29,6 +31,7 @@ export const MOCK_SUBJECTS: Subject[] = [
     notes: [],
     risks: [],
     decisions: [],
+    timeline: [],
   },
   {
     id: "3",
@@ -41,6 +44,7 @@ export const MOCK_SUBJECTS: Subject[] = [
     notes: [],
     risks: [],
     decisions: [],
+    timeline: [],
   },
   {
     id: "4",
@@ -53,6 +57,7 @@ export const MOCK_SUBJECTS: Subject[] = [
     notes: [],
     risks: [],
     decisions: [],
+    timeline: [],
   },
   {
     id: "5",
@@ -65,5 +70,6 @@ export const MOCK_SUBJECTS: Subject[] = [
     notes: [],
     risks: [],
     decisions: [],
+    timeline: [],
   },
 ];

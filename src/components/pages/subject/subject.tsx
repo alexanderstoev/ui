@@ -8,11 +8,11 @@ import {
   Zap,
 } from "lucide-react";
 
-import { DecisionBlock } from "@/components/blocks/decision/decision";
-import { NoteBlock } from "@/components/blocks/note/note";
-import { QuestionBlock } from "@/components/blocks/question/question";
-import { RiskBlock } from "@/components/blocks/risk/risk";
-import { TaskBlock } from "@/components/blocks/task/task";
+import { DecisionBlock } from "@/components/blocks/decision-block/decision-block";
+import { NoteBlock } from "@/components/blocks/note-block/note-block";
+import { QuestionBlock } from "@/components/blocks/question-block/question-block";
+import { RiskBlock } from "@/components/blocks/risk-block/risk-block";
+import { TaskBlock } from "@/components/blocks/task-block/task-block";
 import { Timeline } from "@/components/blocks/timeline/timeline";
 import { Alert, AlertDescription, AlertTitle } from "@/components/primitives/alert/alert";
 import { Button } from "@/components/primitives/button/button";
@@ -30,7 +30,7 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
       <Alert variant="destructive" className="mb-6">
         <CircleAlert />
         <AlertTitle>Subject: Core Architecture</AlertTitle>
-        <AlertDescription className="text-sm">
+        <AlertDescription>
           The Core Architecture subject seems to be lacking behind. You might want the look at the{" "}
           <a>Pending Actions</a>
         </AlertDescription>
@@ -38,7 +38,7 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
       <div className="grid-layout-zen min-h-full">
         <Card className="area-timeline">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2">
+            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
               <History />
               Time line
             </CardTitle>
@@ -49,11 +49,11 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
         </Card>
         <Card className="area-tasks">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2">
+            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
               <ListTodo /> Pending Tasks
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="flex flex-col gap-3">
             {subject.tasks.map((task) => (
               <TaskBlock task={task} />
             ))}
@@ -61,12 +61,12 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
         </Card>
         <Card className="area-risks">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2">
+            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
               <Zap />
               Risks
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="flex flex-col gap-3">
             {subject.risks.map((risk) => (
               <RiskBlock risk={risk} />
             ))}
@@ -74,12 +74,12 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
         </Card>
         <Card className="area-questions">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2">
+            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
               <ShieldQuestion />
               Open Questions
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="flex flex-col gap-3">
             {subject.questions.map((question) => (
               <QuestionBlock question={question} />
             ))}
@@ -87,12 +87,12 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
         </Card>
         <Card className="area-notes">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2">
+            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
               <StickyNote />
               Notes
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="flex flex-col gap-3">
             {subject.notes.map((note) => (
               <NoteBlock note={note} />
             ))}
@@ -100,12 +100,12 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
         </Card>
         <Card className="area-decisions">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2">
+            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
               <Gavel />
               Decisions
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="flex flex-col gap-3">
             {subject.decisions.map((decision) => (
               <DecisionBlock decision={decision} />
             ))}
@@ -113,7 +113,7 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
         </Card>
         <Card className="area-cta">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2">
+            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
               Finalize
             </CardTitle>
           </CardHeader>

@@ -19,7 +19,7 @@ export const DashboardPage = ({ subjects }: DashboardPageProps) => {
       <Alert variant="destructive">
         <CircleAlert />
         <AlertTitle>Subject: Core Architecture</AlertTitle>
-        <AlertDescription className="text-sm">
+        <AlertDescription>
           The Core Architecture subject seems to be lacking behind. You might want the look at the{" "}
           <a>Pending Actions</a>
         </AlertDescription>

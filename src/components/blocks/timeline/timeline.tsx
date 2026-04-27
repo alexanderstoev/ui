@@ -43,7 +43,7 @@ export const Timeline = ({ entries }: TimelineProps) => {
                 {(!entry.type || !entry.entityId) && entry.title}
                 {entry.type && entry.entityId && <a href="#">{entry.title}</a>}
               </h3>
-              <p className="text-muted-foreground text-sm sm:text-base">{entry.description}</p>
+              <p className="text-muted-foreground">{entry.description}</p>
             </div>
           </div>
         ))}
