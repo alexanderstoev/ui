@@ -8,4 +8,5 @@ const meta = { title: "Pages/Subject", component: SubjectPage } satisfies Meta<t
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-export const Subject: Story = { args: { subject: MOCK_SUBJECTS[0] } };
+export const Full: Story = { args: { subject: MOCK_SUBJECTS[0] } };
+export const NoTimeline: Story = { args: { subject: MOCK_SUBJECTS[1] } };
