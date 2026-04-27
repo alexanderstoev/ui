@@ -1,14 +1,26 @@
-import type { Preview } from '@storybook/react-vite';
+import { withThemeByClassName } from "@storybook/addon-themes";
+import type { Preview } from "@storybook/react-vite";
+
 import "../src/index.css";
+
 const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
   },
+  decorators: [
+    withThemeByClassName({
+      themes: {
+        light: "", // No class for light mode
+        dark: "dark", // Adds .dark class to <html>
+      },
+      defaultTheme: "dark",
+    }),
+  ],
 };
 
 export default preview;
