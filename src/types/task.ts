@@ -1,8 +1,9 @@
+export type TaskStatus = "todo" | "doing" | "done" | "overdue";
 export interface Task {
   id: string;
   title: string;
   description: string;
-  status: string;
+  status: TaskStatus;
   priority: string;
   dueDate?: string;
   completedDate?: string;

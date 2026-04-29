@@ -1,10 +1,12 @@
-export const MOCK_QUESTIONS = [
+import type { Question } from "@/types";
+
+export const MOCK_QUESTIONS: Question[] = [
   {
     id: "q-1",
     question: "How do we handle state persistence for the 'Drop-In' editor?",
     context:
       "If a user starts typing a thought and closes the tab, should it be in LocalStorage or a draft DB record?",
-    status: "unresolved",
+    status: "open",
     askedBy: "User",
     priority: "high",
     date: "2026-04-27T14:00:00Z",
@@ -14,7 +16,7 @@ export const MOCK_QUESTIONS = [
     question: "Is the 12-column grid overkill for the mobile view?",
     context:
       "Currently stacking everything, but maybe a 2-column small grid for 'Risks' and 'Decisions' works better.",
-    status: "unresolved",
+    status: "open",
     askedBy: "DesignBot",
     priority: "medium",
     date: "2026-04-26T11:30:00Z",

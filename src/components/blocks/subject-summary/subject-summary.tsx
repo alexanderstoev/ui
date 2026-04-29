@@ -20,27 +20,27 @@ export const SubjectSummary = ({ subject }: PropsWithChildren<SubjectSummaryProp
   return (
     <Card className="max-w-xl min-w-80">
       <CardHeader>
-        <CardTitle className="text-xl font-bold">{subject.name}</CardTitle>
+        <CardTitle className="text-accent-foreground text-xl font-medium">{subject.name}</CardTitle>
         {subject.description ?? <CardDescription>{subject.description}</CardDescription>}
       </CardHeader>
       <CardContent className="h-full">
-        {subject.pendingItems && subject.pendingItems?.length > 0 && (
+        {subject.tasks && subject.tasks?.length > 0 && (
           <>
-            <h2 className="fontfont-bold text-lg">Pending</h2>
+            <h2 className="text-muted-foreground font-medium">Pending tasks</h2>
             <ul className="list-inside list-disc">
-              {subject.pendingItems.map((item) => (
-                <li>{item.name}</li>
-              ))}
+              {subject.tasks
+                .filter((task) => task.status === "overdue" || task.status === "todo")
+                .map((task) => (
+                  <li>{task.title}</li>
+                ))}
             </ul>
-          </>
-        )}
-        {subject.completedItems && subject.completedItems?.length > 0 && (
-          <>
-            <h2 className="fontfont-bold text-lg">Completed</h2>
+            <h2 className="text-muted-foreground mt-4 font-medium">Opened questions</h2>
             <ul className="list-inside list-disc">
-              {subject.completedItems.map((item) => (
-                <li>{item.name}</li>
-              ))}
+              {subject.questions
+                .filter((question) => question.status === "open")
+                .map((task) => (
+                  <li>{task.question}</li>
+                ))}
             </ul>
           </>
         )}

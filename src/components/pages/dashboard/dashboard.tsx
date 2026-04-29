@@ -12,11 +12,14 @@ interface DashboardPageProps {
 
 export const DashboardPage = ({ subjects }: DashboardPageProps) => {
   return (
-    <div className="flex flex-col gap-6">
-      <Card>
+    <div className="grid grid-cols-3 gap-6">
+      <Card className="col-span-2">
         <CardContent>Global stats</CardContent>
       </Card>
-      <Alert variant="destructive">
+      <Card className="row-span-2">
+        <CardContent className="flex h-full items-center justify-center">DROP IN</CardContent>
+      </Card>
+      <Alert variant="destructive" className="col-span-2">
         <CircleAlert />
         <AlertTitle>Subject: Core Architecture</AlertTitle>
         <AlertDescription>
@@ -24,11 +27,10 @@ export const DashboardPage = ({ subjects }: DashboardPageProps) => {
           <a>Pending Actions</a>
         </AlertDescription>
       </Alert>
-      <div className="flex flex-wrap gap-6">
-        {subjects.map((subject) => (
-          <SubjectSummary subject={subject} key={subject.id} />
-        ))}
-      </div>
+
+      {subjects.map((subject) => (
+        <SubjectSummary subject={subject} key={subject.id} />
+      ))}
     </div>
   );
 };
