@@ -38,7 +38,7 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
       <div className="grid-layout-zen min-h-full">
         <Card className="area-timeline">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
+            <CardTitle className="text-secondary-foreground flex items-center gap-2 text-lg">
               <History />
               Time line
             </CardTitle>
@@ -49,7 +49,7 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
         </Card>
         <Card className="area-tasks">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
+            <CardTitle className="text-secondary-foreground flex items-center gap-2 text-lg">
               <ListTodo /> Pending Tasks
             </CardTitle>
           </CardHeader>
@@ -61,7 +61,7 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
         </Card>
         <Card className="area-risks">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
+            <CardTitle className="text-secondary-foreground flex items-center gap-2 text-lg">
               <Zap />
               Risks
             </CardTitle>
@@ -74,7 +74,7 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
         </Card>
         <Card className="area-questions">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
+            <CardTitle className="text-secondary-foreground flex items-center gap-2 text-lg">
               <ShieldQuestion />
               Open Questions
             </CardTitle>
@@ -87,7 +87,7 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
         </Card>
         <Card className="area-notes">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
+            <CardTitle className="text-secondary-foreground flex items-center gap-2 text-lg">
               <StickyNote />
               Notes
             </CardTitle>
@@ -100,7 +100,7 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
         </Card>
         <Card className="area-decisions">
           <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
+            <CardTitle className="text-secondary-foreground flex items-center gap-2 text-lg">
               <Gavel />
               Decisions
             </CardTitle>
@@ -111,14 +111,9 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
             ))}
           </CardContent>
         </Card>
-        <Card className="area-cta">
-          <CardHeader>
-            <CardTitle className="text-accent-foreground flex items-center gap-2 text-lg">
-              Finalize
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Button>FINALIZE</Button>
+        <Card className="area-dropin min-h-23">
+          <CardContent className="flex h-full items-center justify-center">
+            <Button variant="accent">DROP IN</Button>
           </CardContent>
         </Card>
       </div>
