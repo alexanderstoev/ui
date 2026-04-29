@@ -1,5 +1,6 @@
 import { CircleAlert } from "lucide-react";
 
+import { Dropin } from "@/components/blocks/dropin/dropin";
 import { SubjectSummary } from "@/components/blocks/subject-summary/subject-summary";
 import { Alert, AlertDescription, AlertTitle } from "@/components/primitives/alert/alert";
 import { Card, CardContent } from "@/components/primitives/card/card";
@@ -17,7 +18,9 @@ export const DashboardPage = ({ subjects }: DashboardPageProps) => {
         <CardContent>Global stats</CardContent>
       </Card>
       <Card className="row-span-2">
-        <CardContent className="flex h-full items-center justify-center">DROP IN</CardContent>
+        <CardContent className="flex h-full items-center justify-center">
+          <Dropin />
+        </CardContent>
       </Card>
       <Alert variant="destructive" className="col-span-2">
         <CircleAlert />

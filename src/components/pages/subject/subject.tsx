@@ -9,13 +9,13 @@ import {
 } from "lucide-react";
 
 import { DecisionBlock } from "@/components/blocks/decision-block/decision-block";
+import { Dropin } from "@/components/blocks/dropin/dropin";
 import { NoteBlock } from "@/components/blocks/note-block/note-block";
 import { QuestionBlock } from "@/components/blocks/question-block/question-block";
 import { RiskBlock } from "@/components/blocks/risk-block/risk-block";
 import { TaskBlock } from "@/components/blocks/task-block/task-block";
 import { Timeline } from "@/components/blocks/timeline/timeline";
 import { Alert, AlertDescription, AlertTitle } from "@/components/primitives/alert/alert";
-import { Button } from "@/components/primitives/button/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/primitives/card/card";
 
 import type { Subject } from "@/types";
@@ -113,7 +113,7 @@ export const SubjectPage = ({ subject }: SubjectProps) => {
         </Card>
         <Card className="area-dropin min-h-23">
           <CardContent className="flex h-full items-center justify-center">
-            <Button variant="accent">DROP IN</Button>
+            <Dropin />
           </CardContent>
         </Card>
       </div>
