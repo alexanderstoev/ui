@@ -1,4 +1,6 @@
-export const MOCK_DECISIONS = [
+import type { Decision } from "@/types";
+
+export const MOCK_DECISIONS: Decision[] = [
   {
     id: "d-1",
     decision: "Standardize on Tailwind v4 CSS-First Config",
